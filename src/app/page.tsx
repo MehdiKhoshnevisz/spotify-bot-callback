@@ -25,7 +25,7 @@ export default function CallbackPage() {
     } catch (err) {
       setError(err instanceof Error ? err.message : "An error occurred");
     }
-  }, [router]);
+  }, [router, searchParams]);
 
   useEffect(() => {
     handleCallback();
