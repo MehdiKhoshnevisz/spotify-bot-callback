@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "0.6.6",
+    "@types/next": "^9.0.0",
     "@types/node": "22.14.0",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
