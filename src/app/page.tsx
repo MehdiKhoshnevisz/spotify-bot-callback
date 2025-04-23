@@ -20,9 +20,11 @@ export default function CallbackPage() {
       // Process the callback (replace with your actual processing logic)
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
+      setMessage(code);
+
       // Redirect to success page after processing
-      await router.push("/success");
     } catch (err) {
+      setMessage("");
       setError(err instanceof Error ? err.message : "An error occurred");
     }
   }, [router, searchParams]);
@@ -42,7 +44,6 @@ export default function CallbackPage() {
       {!error && (
         <>
           <p>{message}</p>
-          <progress className="w-full h-2" />
         </>
       )}
     </div>
